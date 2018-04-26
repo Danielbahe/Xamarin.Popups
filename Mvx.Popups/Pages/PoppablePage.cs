@@ -4,9 +4,9 @@ using Xamarin.Forms;
 using Xamarin.Popups.Interfaces;
 using Xamarin.Popups.Widgets;
 
-namespace Xamarin.Popups
+namespace Xamarin.Popups.Pages
 {
-    public class PoppableViewModel : ContentPage, IPoppable
+    public class PoppablePage : ContentPage, IPoppable
     {
         protected new object BindingContext
         {
@@ -22,7 +22,7 @@ namespace Xamarin.Popups
         private LoadingWidget loading;
         private object _bindingContext;
 
-        public PoppableViewModel()
+        public PoppablePage()
         {
             BackgroundColor = Color.White;
             Padding = new Thickness(0);
@@ -37,10 +37,7 @@ namespace Xamarin.Popups
         public View PageLayout
         {
             get { return (grid.Children.Count > 0) ? grid.Children[0] : null; }
-            set
-            {
-                grid.Children.Add(value);
-            }
+            set { grid.Children.Add(value); }
         }
 
 
@@ -49,7 +46,7 @@ namespace Xamarin.Popups
             var vm = BindingContext as IPoppableViewModel;
             vm.SetViewBinding(this);
         }
-        
+
         public async Task<bool> ShowAlert(string title, string message, string okText = "Ok", string cancelText = null)
         {
             bool result = true;
@@ -62,8 +59,10 @@ namespace Xamarin.Popups
                 result = false;
                 result = await DisplayAlert(title, message, okText, cancelText);
             }
+
             return result;
         }
+
         public async Task ShowCustomPopUp(ContentView widget)
         {
             this.grid.Children.Add(widget);
@@ -75,20 +74,23 @@ namespace Xamarin.Popups
             this.grid.Children.Add(view);
             return await widget.GetAnswer();
         }
+
         public async Task<T> ShowFormCustomPopUp<T>(IWidget<T> widget, bool animate = false)
         {
             var view = widget as ContentView;
             this.grid.Children.Add(view);
             if (animate)
             {
-                if (!typeof(T).IsAssignableFrom(typeof(IPopupAnimable))) throw new Exception("Widget have no animation, must implement IPopupAnimable");
+                if (!typeof(T).IsAssignableFrom(typeof(IPopupAnimable)))
+                    throw new Exception("Widget have no animation, must implement IPopupAnimable");
                 var animateWidget = widget as IPopupAnimable;
                 animateWidget.Animate();
             }
+
             return await widget.GetAnswer();
         }
 
-        public void ShowLoading()
+        public void ShowLoading(string loadingImage = null, string loadingText = null)
         {
             var loading = new LoadingWidget();
             this.grid.Children.Add(loading);

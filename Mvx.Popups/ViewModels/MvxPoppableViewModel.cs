@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
-using Xamarin.Popups.Interfaces;
 using Xamarin.Forms;
+using Xamarin.Popups.Interfaces;
 
-namespace Xamarin.Popups
+namespace Xamarin.Popups.ViewModels
 {
     public class MvxPoppableViewModel : MvxViewModel, IPoppableViewModel
     {
@@ -17,7 +17,7 @@ namespace Xamarin.Popups
         {
             return await _view.ShowAlert(title, message, okText, cancelText);
         }
-        public void ShowLoading()
+        public void ShowLoading(string loadingImage = null, string loadingText = null)
         {
             _view.ShowLoading();
         }
