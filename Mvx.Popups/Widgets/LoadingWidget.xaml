@@ -2,10 +2,13 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Popups.Widgets.LoadingWidget">
-        <StackLayout BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Center">
+    <Grid>
+        <ContentView BackgroundColor="Black" Opacity="0.3" VerticalOptions="FillAndExpand" />
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="30,0,30,0">
             <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                <Image x:Name="image" Source="icon.png"/>
-                <Label Text="Loading..."/>
+                <Image x:Name="image"/>
+                <Label x:Name="loadingLabel" Margin="5,5,5,5"/>
             </StackLayout>
         </StackLayout>
+    </Grid>
 </ContentView>

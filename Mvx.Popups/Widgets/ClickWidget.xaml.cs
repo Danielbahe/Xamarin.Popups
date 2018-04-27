@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Popups.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Popups.Translations;
 
 namespace Xamarin.Popups.Widgets
 {
@@ -11,12 +12,22 @@ namespace Xamarin.Popups.Widgets
 	{
 	    public bool Answer { get; set; }
 	    public bool Answered { get; set; }
-        public ClickWidget ()
+        public ClickWidget (string message = null, string okText = null)
 		{
 			InitializeComponent ();
+
+		    SetText(message, okText);
 		}
-	    
-        public async Task<bool> GetAnswer()
+
+	    private void SetText(string message, string okText)
+	    {
+	        if (message == null) message = PopupResources.SampleMessage;
+	        if (okText == null) okText = PopupResources.Ok;
+	        messageLabel.Text = message;
+	        acceptButton.Text = okText;
+        }
+
+	    public async Task<bool> GetAnswer()
         {
             await Task.Run(() =>
             {

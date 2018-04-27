@@ -1,16 +1,17 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using MvvmCross.Forms.Views;
+using Xamarin.Forms;
 using Xamarin.Popups.Interfaces;
 using Xamarin.Popups.Widgets;
-using Xamarin.Forms;
-using System;
 
-namespace Xamarin.Popups
+namespace Xamarin.Popups.Pages
 {
-    public class PopableView : MvxContentPage, IPoppable
+    public class MvxPoppablePage : MvxContentPage, IPoppable
     {
         private Grid grid;
-        public PopableView()
+
+        public MvxPoppablePage()
         {
             BackgroundColor = Color.White;
             Padding = new Thickness(0);
@@ -75,7 +76,7 @@ namespace Xamarin.Popups
             return await widget.GetAnswer();
         }
 
-        public void ShowLoading()
+        public void ShowLoading(string loadingImage = null, string loadingText = null)
         {
             var loading = new LoadingWidget();
             this.grid.Children.Add(loading);

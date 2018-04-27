@@ -2,9 +2,11 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Popups.Widgets.ClickWidget">
-  <ContentView.Content>
-      <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
-          <Button Text="Accept" Clicked="Button_OnClicked" BackgroundColor="CadetBlue"/>
-      </StackLayout>
-  </ContentView.Content>
+    <Grid>
+        <ContentView BackgroundColor="Black" Opacity="0.3" VerticalOptions="FillAndExpand"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue" Padding="30,30,30,30">
+            <Label x:Name="messageLabel" Text="Information Message" HorizontalOptions="CenterAndExpand"/>
+            <Button x:Name="acceptButton" Clicked="Button_OnClicked"/>
+        </StackLayout>
+    </Grid>
 </ContentView>
