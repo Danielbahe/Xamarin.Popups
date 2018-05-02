@@ -22,7 +22,7 @@ namespace Xamarin.Popups.Translations {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class PopupResources {
+    public class PopupResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Xamarin.Popups.Translations {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Xamarin.Popups.Translations.PopupResources", typeof(PopupResources).Assembly);
@@ -51,7 +51,7 @@ namespace Xamarin.Popups.Translations {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Xamarin.Popups.Translations {
         /// <summary>
         ///   Busca una cadena traducida similar a Loading....
         /// </summary>
-        internal static string Loading {
+        public static string Loading {
             get {
                 return ResourceManager.GetString("Loading", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Xamarin.Popups.Translations {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static byte[] loading_icon {
+        public static byte[] loading_icon {
             get {
                 object obj = ResourceManager.GetObject("loading_icon", resourceCulture);
                 return ((byte[])(obj));
@@ -82,7 +82,7 @@ namespace Xamarin.Popups.Translations {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static byte[] loading_icon_small {
+        public static byte[] loading_icon_small {
             get {
                 object obj = ResourceManager.GetObject("loading_icon_small", resourceCulture);
                 return ((byte[])(obj));
@@ -92,7 +92,7 @@ namespace Xamarin.Popups.Translations {
         /// <summary>
         ///   Busca una cadena traducida similar a Ok.
         /// </summary>
-        internal static string Ok {
+        public static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
             }
@@ -101,7 +101,7 @@ namespace Xamarin.Popups.Translations {
         /// <summary>
         ///   Busca una cadena traducida similar a This is a message.
         /// </summary>
-        internal static string SampleMessage {
+        public static string SampleMessage {
             get {
                 return ResourceManager.GetString("SampleMessage", resourceCulture);
             }

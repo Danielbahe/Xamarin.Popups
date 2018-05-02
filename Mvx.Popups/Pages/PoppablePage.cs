@@ -92,7 +92,7 @@ namespace Xamarin.Popups.Pages
 
         public void ShowLoading(string loadingImage = null, string loadingText = null)
         {
-            var loading = new LoadingWidget();
+            var loading = new LoadingWidget(loadingImage, loadingText);
             this.grid.Children.Add(loading);
             loading.Animate();
         }
