@@ -18,7 +18,7 @@ namespace Xamarin.Popups.ViewModels
         }
         public void ShowLoading(string loadingImage = null, string loadingText = null)
         {
-            _view.ShowLoading();
+            _view.ShowLoading(loadingImage, loadingText);
         }
         public void HideLoading()
         {
