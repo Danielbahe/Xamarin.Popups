@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Xamarin.Popups</RootNamespace>
+    <Authors>Dani Bautista</Authors>
+    <Company />
+    <Description>Xamarin plugin to show alerts, loadings, custom widgets and custom popups from the viewmodel! 0 LINES OF CODE ON VIEWS</Description>
+    <PackageProjectUrl>https://github.com/Danielbahe/Xamarin.Popups</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Danielbahe/Xamarin.Popups</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
