@@ -21,7 +21,7 @@ namespace Xamarin.Popups.Widgets
         private void SetValues(string loadingImage, string loadingText)
         {
             if(string.IsNullOrEmpty(loadingImage)) image.Source = ImageSource.FromStream(() => new MemoryStream(PopupResources.loading_icon_small));
-            //image.Source = loadingText;
+            image.Source = loadingImage;
             if (loadingText == null) loadingText = PopupResources.Loading;
             loadingLabel.Text = loadingText;
         }
