@@ -95,12 +95,10 @@ namespace Xamarin.Popups.Pages
 
         private void hidePopUps()
         {
-            if (grid.Children.Count > 1)
+            if (grid.Children.Count <= 1) return;
+            for (var index = grid.Children.Count - 1; index > 0; index--)
             {
-                for (int index = grid.Children.Count - 1; index > 0; index--)
-                {
-                    grid.Children.RemoveAt(index);
-                }
+                grid.Children.RemoveAt(index);
             }
         }
     }
