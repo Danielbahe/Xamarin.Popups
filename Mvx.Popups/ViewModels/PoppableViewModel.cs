@@ -4,7 +4,7 @@ using Xamarin.Popups.Interfaces;
 
 namespace Xamarin.Popups.ViewModels
 {
-    public class PoppableViewModel : IPoppableViewModel
+    public abstract class PoppableViewModel : IPoppableViewModel
     {
         private IPoppable _view;
         public void SetViewBinding(object view)
