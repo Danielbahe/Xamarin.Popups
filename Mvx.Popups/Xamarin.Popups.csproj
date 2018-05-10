@@ -8,8 +8,8 @@
     <Description>Xamarin plugin to show alerts, loadings, custom widgets and custom popups from the viewmodel! 0 LINES OF CODE ON VIEWS</Description>
     <PackageProjectUrl>https://github.com/Danielbahe/Xamarin.Popups</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Danielbahe/Xamarin.Popups</RepositoryUrl>
-    <Version>1.0.3</Version>
-    <PackageReleaseNotes>1.0.3 Now you can pass parameters to MvxPoppableViewModel with navigation service.</PackageReleaseNotes>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>1.0.4 Now you can return a Generic object when closing a mvx view model</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
