@@ -8,7 +8,7 @@
     <Description>Xamarin plugin to show alerts, loadings, custom widgets and custom popups from the viewmodel! 0 LINES OF CODE ON VIEWS</Description>
     <PackageProjectUrl>https://github.com/Danielbahe/Xamarin.Popups</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Danielbahe/Xamarin.Popups</RepositoryUrl>
-    <Version>2.0.0-beta</Version>
+    <Version>2.0.0</Version>
     <PackageReleaseNotes>Added PoppableService instead of base methods.
 Now you can mock the service for unit testing purposes.</PackageReleaseNotes>
   </PropertyGroup>
