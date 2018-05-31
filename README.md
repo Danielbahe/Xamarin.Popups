@@ -102,3 +102,6 @@ ALERT! Remember to set the base class on initial tag and set all your content on
         }
     }
 ```
+
+## Unit Testing? Yes!
+In the new 2.0.0 "PoppableService" is a public property of the Viewmodel, this way you can mock it on your unit testing.
