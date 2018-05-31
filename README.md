@@ -41,19 +41,19 @@ ALERT! Remember to set the base class on initial tag and set all your content on
   ```
  The ViewModel just inherate from PoppableViewModel, nothing special
 ```c#
-public class SampleViewModel : BaseViewModel
+public class SampleViewModel : PoppableViewModel
+    {
+        public IMvxCommand ClickCommand { get; set; }
+        public SampleViewModel()
         {
-            public ICommand ClickCommand { get; set; }
-            public SampleViewModel()
-            {
-                ClickCommand = new Command(async () => await ExecuteClickCommand());
-            }
-
-            private void ExecuteClickedCommand()
-            {
-                this.ShowLoading();
-            }
+            ClickCommand = new MvxCommand(ExecuteClickCommand);
         }
+
+        private void ExecuteClickCommand()
+        {
+            this.PoppableService.ShowLoading();
+        }
+    }
 ```
 
 ## MVVMCROSS 
@@ -89,16 +89,16 @@ ALERT! Remember to set the base class on initial tag and set all your content on
  The ViewModel just inherate from MvxPoppableViewModel, nothing special
 ```c#
  public class SampleViewModel : MvxPoppableViewModel
+    {
+        public IMvxCommand ClickCommand { get; set; }
+        public SampleViewModel()
         {
-            public IMvxCommand ClickCommand { get; set; }
-            public SampleViewModel()
-            {
-                ClickCommand = new MvxCommand(ExecuteClickCommand);
-            }
-
-            private void ExecuteClickCommand()
-            {
-                this.ShowLoading();
-            }
+            ClickCommand = new MvxCommand(ExecuteClickCommand);
         }
+
+        private void ExecuteClickCommand()
+        {
+            this.PoppableService.ShowLoading();
+        }
+    }
 ```
