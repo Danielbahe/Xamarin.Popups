@@ -39,7 +39,7 @@ ALERT! Remember to set the base class on initial tag and set all your content on
           } 
       }
   ```
- The ViewModel just inherate from PoppableViewModel, nothing special
+ The ViewModel just inherit from PoppableViewModel, nothing special
 ```c#
 public class SampleViewModel : PoppableViewModel
     {
@@ -86,7 +86,7 @@ ALERT! Remember to set the base class on initial tag and set all your content on
       }
 			
 ```
- The ViewModel just inherate from MvxPoppableViewModel, nothing special
+ The ViewModel just inherit from MvxPoppableViewModel, nothing special
 ```c#
  public class SampleViewModel : MvxPoppableViewModel
     {
